@@ -1,0 +1,6 @@
+@import 'lib';
+
+.extendedThing {
+    @extend .thing;
+    background-color: $some-var;
+}

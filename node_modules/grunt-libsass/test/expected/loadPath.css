@@ -1,0 +1,5 @@
+.thing, .extendedThing {
+  border: 1px solid #fff; }
+
+.extendedThing {
+  background-color: #f00; }
