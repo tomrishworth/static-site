@@ -34,7 +34,7 @@ module.exports = function(grunt) {
         }
       },
       html: {
-        files: ['*.jade', 'src/includes/*.jade'],
+        files: ['**/*.jade'],
         tasks: ['jade'],
         options: {
           spawn: false,
