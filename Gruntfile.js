@@ -10,10 +10,15 @@ module.exports = function(grunt) {
         }
       }
     },
-    libsass: {
-      files: {
-          src: 'src/sass/style.scss',
-          dest: 'build/css/style.css'
+    sass: {
+      options: {
+        sourceComments: 'map',
+        outputStyle: 'compressed'
+      },
+      dist: {
+        files: {
+          'build/css/style.css': 'src/sass/style.scss'
+        }
       }
     },
     watch: {
@@ -27,7 +32,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['src/sass/**/*.scss'],
-        tasks: ['libsass'],
+        tasks: ['sass'],
         options: {
           spawn: false,
           livereload: true
@@ -57,17 +62,18 @@ module.exports = function(grunt) {
         options: {
           port: 8000,
           base: 'build/',
-          keepalive: true
+          //keepalive: true,
+          open: true
         }
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-libsass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask('default', ['watch', 'connect']);
+  grunt.registerTask('default', ['connect', 'watch']);
 };
