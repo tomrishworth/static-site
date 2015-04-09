@@ -1,3 +1,10 @@
+var paths = {
+  bowerComponents: [
+  'bower_components/jquery/dist/jquery.js',
+  'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
+  ]
+}
+
 module.exports = function(grunt) {
   grunt.initConfig({
     jade: {
@@ -50,9 +57,8 @@ module.exports = function(grunt) {
     concat: {
       js: {
         src: [
-          'bower_components/jquery/dist/jquery/js',
-          'bower_components/bootstrap-sass-offical/assets/javascripts/bootstrap.js',
-          'assets/js/*.js'
+          paths.bowerComponents,
+          'src/js/*.js'
         ],
         dest: 'build/js/scripts.js',
       }
@@ -62,7 +68,6 @@ module.exports = function(grunt) {
         options: {
           port: 8000,
           base: 'build/',
-          //keepalive: true,
           open: true
         }
       }
