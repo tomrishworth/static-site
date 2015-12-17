@@ -4,21 +4,16 @@
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node_modules/.bin/bower install"
   },
   "author": "Tom Rishworth",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "grunt": "*",
-    "grunt-sass": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-jade": "*",
-    "grunt-serve": "*",
-    "grunt-contrib-connect": "*",
-    "bower": "*"
-  },
-  "scripts": {
-    "postinstall" : "node_modules/.bin/bower install"
+    "bower": "*",
+    "gulp": "^3.8.11",
+    "gulp-livereload": "^3.8.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-concat": "^2.6.0"
   }
 }
