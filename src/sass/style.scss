@@ -1,4 +1,9 @@
-@import "variables";
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "mixins";
+//@import "variables";
+//@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "mixins";
 
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+
+body {
+  background: red;
+}
