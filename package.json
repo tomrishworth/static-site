@@ -10,10 +10,12 @@
   "license": "BSD-2-Clause",
   "devDependencies": {
     "bower": "*",
-    "gulp": "^3.8.11",
-    "gulp-livereload": "^3.8.0",
-    "gulp-sass": "^2.0.1",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-concat": "^2.6.0"
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-livereload": "*",
+    "gulp-minify-css": "*",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "*"
   }
 }
