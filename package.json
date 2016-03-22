@@ -12,10 +12,16 @@
     "bower": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
+    "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "*",
     "gulp-livereload": "*",
     "gulp-minify-css": "*",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "*"
+  },
+  "dependencies": {
+    "gulp-rename": "^1.2.2",
+    "handlebars": "^4.0.5",
+    "handlebars-layouts": "^3.1.3"
   }
 }

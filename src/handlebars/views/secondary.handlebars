@@ -1,0 +1,14 @@
+{{#extend "layout"}}
+{{#content "page-content"}}
+    <h1>
+       Repeat Example
+    </h1>
+    <ul>
+    {{#each dummyData}}
+        <li class="name">
+            {{name}}
+        </li>
+    {{/each}}
+    </ul>
+{{/content}}
+{{/extend}}

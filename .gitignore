@@ -9,3 +9,9 @@ bower_components
 
 # Ignore Sass maps
 *.css.map
+
+# Ignore Dist
+dist
+
+# Ignore IDE
+.idea

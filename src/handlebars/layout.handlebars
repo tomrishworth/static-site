@@ -1,18 +1,20 @@
-fds
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {{#block "styles"}}
     <link rel="stylesheet" href="dist/css/style.css">
+    {{/block}}
 </head>
 <body>
 <div class="container">
-    <p>Left</p>
+    {{#block "page-content"}}
+    {{/block}}
 </div>
+{{#block "scripts"}}
 <script src="dist/js/app.js"></script>
+{{/block}}
 </body>
 </html>
-
-zz
