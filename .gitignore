@@ -10,8 +10,8 @@ bower_components
 # Ignore Sass maps
 *.css.map
 
-# Ignore Dist
-dist
+# Ignore build folder
+build
 
 # Ignore IDE
 .idea
