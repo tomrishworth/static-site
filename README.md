@@ -4,17 +4,19 @@ Static site generator for prototyping
 Inculdes Bootstrap 4
 
 `npm install` to get setup
-`gulp` to compile scss and watch with livereload
+`gulp` to compile scss, js, & mustache templates
+`gulp watch` to watch & compile scss, js, & mustache templates
 
+# Mustache templates
 
-# {{#extend "parent-template-name"}}
+## {{#extend "parent-template-name"}}
 Extend pulls in a parent template.
 
-# {{#block "block-name"}}
+## {{#block "block-name"}}
 Block allows you to define sections that the child templates can insert content into.
 
-# {{#content "block-name"}}
+## {{#content "block-name"}}
 Content is injected into blocks with a matching name.
 
-# {{ > component-name}}
+## {{ > component-name}}
 A component whose file basename

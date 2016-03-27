@@ -24,13 +24,19 @@ var handlebarsConfig = {
         templateData: {
             dummyData: [
                 {
-                    name: 'Michael'
+                    name: 'Todd Marshall',
+                    imageUrl: 'https://source.unsplash.com/rivAqXQNves/500x300',
+                    bio: 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncu dui vel sem. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
                 },
                 {
-                    name: 'Alex'
+                    name: 'Jesse Moore',
+                    imageUrl: 'https://source.unsplash.com/3JZeW3rtg6E/500x300',
+                    bio: 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncu dui vel sem. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
                 },
                 {
-                    name: 'Simon'
+                    name: 'David Elliott',
+                    imageUrl: 'https://source.unsplash.com/lSegRSDBMLw/500x300',
+                    bio: 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncu dui vel sem. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
                 }
             ]
         },
@@ -58,7 +64,7 @@ gulp.task('sass', function () {
       keepSpecialComments: 0
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('build/css'))
     //.pipe(livereload({ start: true }))
 });
 
@@ -67,17 +73,17 @@ gulp.task('scripts', function() {
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('handlebars', function() {
     return gulp.src('src/handlebars/views/*.handlebars')
         .pipe(handlebars(handlebarsConfig.index.templateData, handlebarsConfig.index.options))
         .pipe(rename(function (path) {
-            path.dirname += '/' + path.basename;
+            // path.dirname += '/' + path.basename;
             path.extname = '.html';
         }))
-        .pipe(gulp.dest('./dist/views'));
+        .pipe(gulp.dest('./build'));
 });
 
 gulp.task('watch', function() {

@@ -1,0 +1,19 @@
+{{#extend "layout"}}
+{{#content "page-content"}}
+    <h1 class="m-b-2">About Us</h1>
+
+    <div class="row">
+    {{#each dummyData}}
+      <div class="col-sm-4">
+        <div class="card">
+            <img class="card-img-top img-fluid" src="{{imageUrl}}">
+            <div class="card-block">
+              <h2 class="h4">{{name}}</h2>
+              <p>{{ bio }}</p>
+            </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/content}}
+{{/extend}}
