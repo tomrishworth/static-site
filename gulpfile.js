@@ -22,23 +22,7 @@ var jsPaths = [
 var handlebarsConfig = {
     index: {
         templateData: {
-            dummyData: [
-                {
-                    name: 'Todd Marshall',
-                    imageUrl: 'https://source.unsplash.com/rivAqXQNves/500x300',
-                    bio: 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncu dui vel sem. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-                },
-                {
-                    name: 'Jesse Moore',
-                    imageUrl: 'https://source.unsplash.com/3JZeW3rtg6E/500x300',
-                    bio: 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncu dui vel sem. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-                },
-                {
-                    name: 'David Elliott',
-                    imageUrl: 'https://source.unsplash.com/lSegRSDBMLw/500x300',
-                    bio: 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncu dui vel sem. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-                }
-            ]
+            dummyData: require('./static_data.json')
         },
         options: {
             ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
