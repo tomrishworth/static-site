@@ -1,22 +1,30 @@
-# static-site
-Static site generator for prototyping
+# A Static Site Generator
+Static site generator for prototyping, using [Handlebars](http://handlebarsjs.com/) templates & [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
 
-Inculdes Bootstrap 4
+## Setup Instructions
 
-`npm install` to get setup
-`gulp` to compile scss, js, & mustache templates
-`gulp watch` to watch & compile scss, js, & mustache templates
+* `npm install` to get setup
+* `gulp` to compile scss, js, & mustache templates
+* `gulp watch` to watch & compile scss, js, & mustache templates
 
-# Mustache templates
+## Handlebars templates
 
-## {{#extend "parent-template-name"}}
+Handlebars templates in the `templates/views` folder will be compiled with Gulp into separate html files in the `build` folder.
+
+Handlebars templates in the `templates/components` folder can be included into other templates.
+
+`{{#extend "parent-template-name"}}`
 Extend pulls in a parent template.
 
-## {{#block "block-name"}}
+`{{#block "block-name"}}`
 Block allows you to define sections that the child templates can insert content into.
 
-## {{#content "block-name"}}
+`{{#content "block-name"}}`
 Content is injected into blocks with a matching name.
 
-## {{ > component-name}}
+`{{ > component-name}}`
 A component whose file basename
+
+## Working with JSON
+
+Data from JSON files can be added into the handlebars templates. This is setup within the `gulpfile.js` inside `handlebarsConfig`.

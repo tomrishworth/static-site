@@ -22,13 +22,13 @@ var jsPaths = [
 var handlebarsConfig = {
     index: {
         templateData: {
-            dummyData: require('./static_data.json')
+            aboutData: require('./static_data.json')
         },
         options: {
             ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
             batch : [
-                './src/handlebars/',
-                './src/handlebars/components/'
+                './src/templates/',
+                './src/templates/components/'
             ],
             helpers : {
                 capitals : function(str){
@@ -61,7 +61,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('handlebars', function() {
-    return gulp.src('src/handlebars/views/*.handlebars')
+    return gulp.src('src/templates/views/*.handlebars')
         .pipe(handlebars(handlebarsConfig.index.templateData, handlebarsConfig.index.options))
         .pipe(rename(function (path) {
             // path.dirname += '/' + path.basename;
@@ -74,7 +74,7 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['scripts']);
-  gulp.watch('src/handlebars/**/*.handlebars', ['handlebars']);
+  gulp.watch('src/templates/**/*.handlebars', ['handlebars']);
 });
 
 gulp.task('default', ['sass', 'scripts', 'handlebars']);
