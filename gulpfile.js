@@ -10,7 +10,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var handlebars = require('gulp-compile-handlebars');
 var layouts = require('handlebars-layouts');
-//
+var browserSync = require('browser-sync');
+
 handlebars.Handlebars.registerHelper(layouts(handlebars.Handlebars));
 
 var jsPaths = [
@@ -39,6 +40,7 @@ var handlebarsConfig = {
     }
 };
 
+// Compile SCSS
 gulp.task('sass', function () {
   gulp.src('src/sass/**/*.scss')
     .pipe(sourcemaps.init())
@@ -49,9 +51,9 @@ gulp.task('sass', function () {
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'))
-    //.pipe(livereload({ start: true }))
 });
 
+// Compile JS
 gulp.task('scripts', function() {
     return gulp.src(jsPaths)
         .pipe(sourcemaps.init())
@@ -60,6 +62,7 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('build/js'));
 });
 
+// Compile layouts, pages, and partials into flat HTML files
 gulp.task('handlebars', function() {
     return gulp.src('src/templates/views/*.handlebars')
         .pipe(handlebars(handlebarsConfig.index.templateData, handlebarsConfig.index.options))
@@ -70,6 +73,16 @@ gulp.task('handlebars', function() {
         .pipe(gulp.dest('./build'));
 });
 
+// Start a server with LiveReload to preview the site in
+gulp.task('server', function(){
+    browserSync.init({
+        server: {
+            baseDir: "build"
+        }
+    });
+});
+
+// Watch for file changes
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('src/sass/**/*.scss', ['sass']);
@@ -77,4 +90,8 @@ gulp.task('watch', function() {
   gulp.watch('src/templates/**/*.handlebars', ['handlebars']);
 });
 
-gulp.task('default', ['sass', 'scripts', 'handlebars']);
+// Build the "build" folder by running all of the above tasks
+gulp.task('build', ['sass', 'scripts', 'handlebars']);
+
+// Run builds, run the server, and watch for file changes
+gulp.task('default', ['build', 'server', 'watch']);
