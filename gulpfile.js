@@ -16,7 +16,7 @@ handlebars.Handlebars.registerHelper(layouts(handlebars.Handlebars));
 
 var jsPaths = [
     "bower_components/jquery/dist/jquery.js",
-    "bower_components/bootstrap/dist/js/bootstrap.js",
+    "bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
     "src/js/app.js",
 ];
 

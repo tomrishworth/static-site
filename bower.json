@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": ">=4.0.0-alpha.2"
+    "bootstrap-sass": "*",
+    "css-utilities": "https://github.com/tomrishworth/css-utilities.git"
   }
 }
