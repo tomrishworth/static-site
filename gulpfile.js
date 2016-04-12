@@ -84,14 +84,24 @@ gulp.task('server', function(){
 
 // Watch for file changes
 gulp.task('watch', function() {
-  livereload.listen();
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/templates/**/*.handlebars', ['handlebars']);
+  gulp.watch('src/templates/**/*.handlebars').on('change', browserSync.reload);
 });
 
 // Build the "build" folder by running all of the above tasks
 gulp.task('build', ['sass', 'scripts', 'handlebars']);
 
 // Run builds, run the server, and watch for file changes
-gulp.task('default', ['build', 'server', 'watch']);
+gulp.task('default', ['build']);
+
+gulp.task('serve', ['sass'], function(){
+    browserSync.init({
+        server: "./build"
+    });
+    gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
+    gulp.watch('src/templates/**/*.handlebars', ['handlebars']);
+    gulp.watch('src/templates/**/*.handlebars').on('change', browserSync.reload);
+})
