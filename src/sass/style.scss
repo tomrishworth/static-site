@@ -1,18 +1,26 @@
+// BassCSS Variables
+$space-1: 5px;
+$space-2: 15px;
+$space-3: 30px;
+$space-4: 50px;
+$breakpoint-sm: '(min-width: 768px)';
+$breakpoint-md: '(min-width: 992px)';
+$breakpoint-lg: '(min-width: 1200px)';
+
 @import "variables";
 
-@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "./bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+// Basscss Utilities
+@import "./bower_components/basscss-sass/scss/_flexbox.scss";
+@import "./bower_components/basscss-sass/scss/_padding.scss";
+@import "./bower_components/basscss-sass/scss/_margin.scss";
+@import "./bower_components/basscss-sass/scss/_responsive-padding.scss";
+@import "./bower_components/basscss-sass/scss/_responsive-margin.scss";
+@import "./bower_components/basscss-sass/scss/_typography.scss";
 
-.page-wrapper {
-  flex: 1;
-}
+// Import elements
+@import "elements/**/*.scss";
 
-footer {
-  background: $gray-dark;
-  color: #fff;
-}
+// Import components
+@import "components/**/*.scss";

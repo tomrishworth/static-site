@@ -10,6 +10,7 @@ Static site generator for prototyping, using [Handlebars](http://handlebarsjs.co
 ## Directory Structure
 
 Working files are in the `src` directory and are compiled into the `build` directory.
+Any sass files placed in the components or elements directories will be imported automatically.
 
 ## Handlebars templates
 

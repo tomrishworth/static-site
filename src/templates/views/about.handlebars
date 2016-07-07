@@ -1,13 +1,13 @@
 {{#extend "layout"}}
 {{#content "page-content"}}
-    <h1 class="m-b-2">About Us</h1>
+    <h1 class="mb2">About Us</h1>
 
     <div class="row">
     {{#each aboutData}}
       <div class="col-sm-4">
-        <div class="card">
-            <img class="card-img-top img-fluid" src="{{profile_img}}">
-            <div class="card-block">
+        <div class="panel">
+            <img class="img-responsive" src="{{profile_img}}">
+            <div class="p2">
               <h2 class="h4">{{name}}</h2>
               <p>{{ profile_bio}}</p>
             </div>

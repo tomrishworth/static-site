@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
 var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
@@ -44,6 +45,7 @@ var handlebarsConfig = {
 gulp.task('sass', function () {
   gulp.src('src/sass/**/*.scss')
     .pipe(sourcemaps.init())
+    .pipe(sassGlob())
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(minifyCss({
