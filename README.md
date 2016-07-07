@@ -5,7 +5,7 @@ Static site generator for prototyping, using [Handlebars](http://handlebarsjs.co
 
 * `npm install` to get setup
 * `gulp` to compile scss, js, & mustache templates
-* `gulp watch` to watch & compile scss, js, & mustache templates
+* `gulp serve` to watch & compile scss, js, & mustache templates, and run browserSync
 
 ## Handlebars templates
 
