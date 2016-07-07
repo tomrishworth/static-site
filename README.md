@@ -7,6 +7,10 @@ Static site generator for prototyping, using [Handlebars](http://handlebarsjs.co
 * `gulp` to compile scss, js, & mustache templates
 * `gulp serve` to watch & compile scss, js, & mustache templates, and run browserSync
 
+## Directory Structure
+
+Working files are in the `src` directory and are compiled into the `build` directory.
+
 ## Handlebars templates
 
 Handlebars templates in the `templates/views` folder will be compiled with Gulp into separate html files in the `build` folder.
