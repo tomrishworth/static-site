@@ -18,6 +18,8 @@
   ],
   "dependencies": {
     "bootstrap-sass": "*",
-    "basscss-sass": "*"
+    "basscss-sass": "*",
+    "vue": "^1.0.26",
+    "vue-strap": "^1.0.11"
   }
 }

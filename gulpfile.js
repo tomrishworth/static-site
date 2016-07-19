@@ -16,8 +16,8 @@ var browserSync = require('browser-sync');
 handlebars.Handlebars.registerHelper(layouts(handlebars.Handlebars));
 
 var jsPaths = [
-    "bower_components/jquery/dist/jquery.js",
-    "bower_components/bootstrap/dist/js/bootstrap.js",
+    "./bower_components/vue/dist/vue.js",
+    "./bower_components/vue-strap/dist/vue-strap.js",
     "src/js/app.js",
 ];
 

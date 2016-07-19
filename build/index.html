@@ -22,10 +22,29 @@
     </div>
   </nav>
   <div class="container">
-
+      <div id="app">
   <h1 class="m-b-2">Welcome</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem enim, blandit vitae odio vitae, consequat efficitur enim. Sed eget fringilla erat. Ut imperdiet enim vel lorem dapibus cursus. Quisque a ligula ligula. Aenean ullamcorper ut mauris quis vehicula. Cras dui nisl, feugiat a euismod in, accumsan sit amet purus. Vestibulum malesuada eros sit amet erat dapibus gravida. Phasellus dignissim leo mi, non scelerisque orci dignissim non. Cras scelerisque velit vitae augue auctor, eu consectetur magna ultrices. Mauris vulputate blandit mattis. Phasellus elit ipsum, porta sollicitudin tellus non, lacinia interdum tellus. Suspendisse mi lacus, varius tristique scelerisque facilisis, facilisis eget nunc.</p>
 
+  <input type="checkbox" v-model="checked">
+  <label for="checked">Open only one at a time.</label>
+
+  <accordion :one-at-atime="checked">
+    <panel header="Panel #1" :is-open="true">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem enim, blandit vitae odio vitae, consequat efficitur enim. Sed eget fringilla erat. Ut imperdiet enim vel lorem dapibus cursus. Quisque a ligula ligula. Aenean ullamcorper ut mauris quis vehicula. Cras dui nisl, feugiat a euismod in, accumsan sit amet purus. Vestibulum malesuada eros sit amet erat dapibus gravida. Phasellus dignissim leo mi, non scelerisque orci dignissim non. Cras scelerisque velit vitae augue auctor, eu consectetur magna ultrices. Mauris vulputate blandit mattis. Phasellus elit ipsum, porta sollicitudin tellus non, lacinia interdum tellus. Suspendisse mi lacus, varius tristique scelerisque facilisis, facilisis eget nunc.</p>
+    </panel>
+    <panel header="Panel #2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem enim, blandit vitae odio vitae, consequat efficitur enim. Sed eget fringilla erat. Ut imperdiet enim vel lorem dapibus cursus. Quisque a ligula ligula. Aenean ullamcorper ut mauris quis vehicula. Cras dui nisl, feugiat a euismod in, accumsan sit amet purus. Vestibulum malesuada eros sit amet erat dapibus gravida. Phasellus dignissim leo mi, non scelerisque orci dignissim non. Cras scelerisque velit vitae augue auctor, eu consectetur magna ultrices. Mauris vulputate blandit mattis. Phasellus elit ipsum, porta sollicitudin tellus non, lacinia interdum tellus. Suspendisse mi lacus, varius tristique scelerisque facilisis, facilisis eget nunc.</p>
+    </panel>
+    <panel header="Panel #3">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem enim, blandit vitae odio vitae, consequat efficitur enim. Sed eget fringilla erat. Ut imperdiet enim vel lorem dapibus cursus. Quisque a ligula ligula. Aenean ullamcorper ut mauris quis vehicula. Cras dui nisl, feugiat a euismod in, accumsan sit amet purus. Vestibulum malesuada eros sit amet erat dapibus gravida. Phasellus dignissim leo mi, non scelerisque orci dignissim non. Cras scelerisque velit vitae augue auctor, eu consectetur magna ultrices. Mauris vulputate blandit mattis. Phasellus elit ipsum, porta sollicitudin tellus non, lacinia interdum tellus. Suspendisse mi lacus, varius tristique scelerisque facilisis, facilisis eget nunc.</p>
+    </panel>
+    <panel header="Panel #4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem enim, blandit vitae odio vitae, consequat efficitur enim. Sed eget fringilla erat. Ut imperdiet enim vel lorem dapibus cursus. Quisque a ligula ligula. Aenean ullamcorper ut mauris quis vehicula. Cras dui nisl, feugiat a euismod in, accumsan sit amet purus. Vestibulum malesuada eros sit amet erat dapibus gravida. Phasellus dignissim leo mi, non scelerisque orci dignissim non. Cras scelerisque velit vitae augue auctor, eu consectetur magna ultrices. Mauris vulputate blandit mattis. Phasellus elit ipsum, porta sollicitudin tellus non, lacinia interdum tellus. Suspendisse mi lacus, varius tristique scelerisque facilisis, facilisis eget nunc.</p>
+    </panel>
+  </accordion>
+
+      </div>
   </div>
 </div>
 <footer class="p-t-1 p-b-1">
