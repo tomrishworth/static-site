@@ -1,5 +1,5 @@
 # A Static Site Generator
-Static site generator for prototyping, using [Handlebars](http://handlebarsjs.com/) templates & [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
+Static site generator for prototyping, using [Handlebars](http://handlebarsjs.com/), [Bootstrap](http://getbootstrap.com/), and [BassCss](http://www.basscss.com/)
 
 ## Setup Instructions
 
