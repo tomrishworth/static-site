@@ -8,10 +8,12 @@ var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
 var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
-var minifyCss = require('gulp-minify-css');
 var handlebars = require('gulp-compile-handlebars');
 var layouts = require('handlebars-layouts');
 var browserSync = require('browser-sync');
+var plumber = require('gulp-plumber');
+var gutil = require('gulp-util');
+var notify = require("gulp-notify");
 
 handlebars.Handlebars.registerHelper(layouts(handlebars.Handlebars));
 
@@ -45,12 +47,10 @@ var handlebarsConfig = {
 gulp.task('sass', function () {
   gulp.src('src/sass/**/*.scss')
     .pipe(sourcemaps.init())
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sassGlob())
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(minifyCss({
-      keepSpecialComments: 0
-    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'))
 });
